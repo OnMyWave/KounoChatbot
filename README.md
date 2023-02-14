@@ -12,3 +12,11 @@ Frontend : Vue3.js, Backend: Node.js Express를 사용하여 서버를 구축했
 - Database API : 챗봇을 이용하는 유저의 질문 및 답변 로그를 저장하여 추후 모델 개선에 사용하거나 task가 정해진 세부 답변에 이용하기 위해  위해 MongoDB API를 구축했습니다. 예를 들어, 질문이 특정 분야에 집중되었다면 그 로그를 바탕으로 연관 강의를 추천해주거나 지식을 선제적으로 제시하는 형태를 뜻합니다. 또한, OpenAI의 코드 생성 모델인 Copilot을 이용해 자동으로 코드를 생성해 해당 분야에 대한 실습을 먼저 시켜 이해도를 증진시킬 수 있습니다.
 - OpenAI API : 사용자가 챗봇을 사용하여 질문하는 경우를 기존 OpenAI GPT-3 Curie 모델을 이용하기 위해 API를 구축했습니다. 하지만, 특정 Task에 관련된 질문이기 때문에 Task-oriented Dialogue Model을 구축하는 작업 진행 중입니다.
 - Compile API : 교육용 하드웨어는 아두이노만 있는 것이 아니고 계속해서 다른 기기로 확장될 수 있기 때문에 어떠한 FPGA를 사용해도 CLI를 사용하여 컴파일 할 수 있게 Node-cmd 라이브러리를 이용해 Compile API를 구축했습니다.
+
+### GPT
+- OpenAI API를 사용한 Curie 모델의 경우, 쿠노소프트 아두이노 학습 보조 챗봇이 지향하는 Task-Oriented Dialogue System과 방향성이 맞지 않기 때문에 독자적인 모델 개발이 요구됨.
+- 그렇기 때문에 KakaoBrain에서 GPT-3 기반 모델에 한국어 데이터를 학습시켜 공개한 KoGPT를 이용하여 프로토타입 개발에 착수
+- Pretrained된 모델을 가져와 원하는 Task에 맞게 작동하기 위해서는 Fine-Tuning 작업이 필요함.
+- 이 작업은 많은 데이터셋을 필요로 하기 때문에 아두이노 관련 질문 데이터셋 구축 작업이 필요로 하였음
+- 아두이노 관련 질문이 많은 네이버 지식인 Q&A에서 질문 1000개를 크롤링하여 데이터셋을 구축
+- 이후 모델 학습 Fine-Tuning 작업이 필요한 상황
