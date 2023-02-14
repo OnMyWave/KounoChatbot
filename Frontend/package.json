@@ -1,0 +1,34 @@
+{
+  "name": "kounosoft",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@chat-ui/vue3": "^1.0.11",
+    "@wokwi/elements": "^1.4.3",
+    "avr8js": "^0.20.1",
+    "buffer": "^6.0.3",
+    "intel-hex": "^0.1.2",
+    "simple-code-editor": "^1.2.2",
+    "socket.io": "^4.5.4",
+    "socketio": "^1.0.0",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.3",
+    "vue3-beautiful-chat": "^3.3.1",
+    "vuex": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
